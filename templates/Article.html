@@ -1,0 +1,15 @@
+{% extends 'flatpages/default.html' %}
+
+{% load news_filters %}
+
+{% block title %}
+Article
+{% endblock title %}
+
+
+{% block content %}
+<h1>{{ Article.name|censor}}</h1>
+<h3> Дата создания: {{ Article.data|date:'d M Y' }}</h3>
+<h3>{{ Article.ARtext|censor}}</h3>
+{% endblock content %}
+
